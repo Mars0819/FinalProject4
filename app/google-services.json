@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "97012462359",
+    "project_id": "finpro4-65553",
+    "storage_bucket": "finpro4-65553.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:97012462359:android:2ee838967e27338a5a3d52",
+        "android_client_info": {
+          "package_name": "com.example.finalproject4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "97012462359-3f6rtlh051llscu75ognk91n4jo0fkvr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.finalproject4",
+            "certificate_hash": "e4ffafb58e0b6132a13eced06108e2d95308ef40"
+          }
+        },
+        {
+          "client_id": "97012462359-rtcnl1f57mkeatc006q4ddbp2mis7pte.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDV1oPULFe5mkX77eUmHJ-asoJcQ2lFCRI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "97012462359-rtcnl1f57mkeatc006q4ddbp2mis7pte.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

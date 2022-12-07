@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#3fff"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="User Login"
+            android:textColor="@color/primaryColor"
+            android:textSize="25sp" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            app:lottie_rawRes="@raw/usingmobilephone"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:scaleType="fitCenter"/>
+
+        <EditText
+            android:id="@+id/edt_email"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/primaryColor"
+            android:background="@drawable/custombutton"
+            />
+        <EditText
+            android:id="@+id/edt_password"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColorHint="@color/primaryColor"
+            android:background="@drawable/custombutton"/>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="Sign in"
+            android:textAllCaps="false"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/primaryColor"
+            android:textColor="#FFFBF6"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#3fff"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/tvAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:layout_below="@id/btnRegister"
+            android:fontFamily="@font/poppinsbold"
+            android:text="don't have an account yet?"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/tvRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="REGISTER"
+            android:layout_below="@+id/tvAccount"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppinsbold"
+            android:textStyle="bold"
+            android:textColor="@color/primaryColor"/>
+
+    </LinearLayout>
+</RelativeLayout>
