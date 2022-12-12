@@ -10,9 +10,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:background="#3fff"
         android:gravity="center"
+        android:orientation="vertical"
         android:padding="10dp">
 
         <TextView
@@ -28,70 +28,71 @@
         <com.airbnb.lottie.LottieAnimationView
             android:layout_width="300dp"
             android:layout_height="300dp"
-            app:lottie_rawRes="@raw/usingmobilephone"
+            android:scaleType="fitCenter"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            android:scaleType="fitCenter"/>
+            app:lottie_rawRes="@raw/usingmobilephone" />
 
         <EditText
             android:id="@+id/edt_email"
-            android:layout_marginTop="15dp"
-            android:gravity="center"
             android:layout_width="250dp"
             android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/custombutton"
+            android:gravity="center"
             android:hint="Email"
             android:inputType="textEmailAddress"
-            android:textColorHint="@color/primaryColor"
-            android:background="@drawable/custombutton"
-            />
+            android:textColorHint="@color/primaryColor" />
+
         <EditText
             android:id="@+id/edt_password"
-            android:layout_marginTop="15dp"
-            android:gravity="center"
             android:layout_width="250dp"
             android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/custombutton"
+            android:gravity="center"
             android:hint="Password"
             android:inputType="textPassword"
-            android:textColorHint="@color/primaryColor"
-            android:background="@drawable/custombutton"/>
+            android:textColorHint="@color/primaryColor" />
 
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="100dp"
             android:layout_height="40dp"
-            android:text="Sign in"
-            android:textAllCaps="false"
             android:layout_marginTop="30dp"
             android:backgroundTint="@color/primaryColor"
-            android:textColor="#FFFBF6"/>
+            android:text="Sign in"
+            android:textAllCaps="false"
+            android:textColor="#FFFBF6" />
 
         <View
             android:layout_width="fill_parent"
             android:layout_height="2dp"
-            android:background="#3fff"
-            android:layout_marginTop="15dp"/>
+            android:layout_marginTop="15dp"
+            android:background="#3fff" />
 
         <TextView
             android:id="@+id/tvAccount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/btnRegister"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="40dp"
-            android:layout_below="@id/btnRegister"
             android:fontFamily="@font/poppinsbold"
             android:text="don't have an account yet?"
             android:textColor="@color/black"
             android:textSize="15sp" />
+
         <TextView
             android:id="@+id/tvRegister"
             android:layout_width="wrap_content"
             android:layout_height="35dp"
-            android:text="REGISTER"
             android:layout_below="@+id/tvAccount"
             android:layout_centerHorizontal="true"
             android:fontFamily="@font/poppinsbold"
-            android:textStyle="bold"
-            android:textColor="@color/primaryColor"/>
+            android:text="REGISTER"
+            android:textColor="@color/primaryColor"
+            android:textStyle="bold" />
 
     </LinearLayout>
 </RelativeLayout>
