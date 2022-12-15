@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class BookingPage extends AppCompatActivity {
@@ -45,7 +44,7 @@ public class BookingPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(BookingPage.this, "Input Success", Toast.LENGTH_LONG).show();
-                startActivity(new Intent(BookingPage.this,HomepageActivity.class));
+                startActivity(new Intent(BookingPage.this,pilihkursi.class));
 
             }
         });
