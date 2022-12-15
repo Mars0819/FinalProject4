@@ -35,31 +35,39 @@
 
         <EditText
             android:id="@+id/edt_email"
-            android:layout_width="250dp"
-            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:layout_marginTop="15dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
             android:background="@drawable/custombutton"
             android:gravity="center"
             android:hint="Email"
+            android:textColor="@color/black"
             android:inputType="textEmailAddress"
             android:textColorHint="@color/primaryColor" />
 
         <EditText
             android:id="@+id/edt_password"
-            android:layout_width="250dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:background="@drawable/custombutton"
             android:gravity="center"
             android:hint="Password"
+            android:textColor="@color/black"
             android:inputType="textPassword"
             android:textColorHint="@color/primaryColor" />
 
         <Button
             android:id="@+id/btnLogin"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
             android:backgroundTint="@color/primaryColor"
             android:text="Sign in"
             android:textAllCaps="false"
@@ -93,6 +101,5 @@
             android:text="REGISTER"
             android:textColor="@color/primaryColor"
             android:textStyle="bold" />
-
     </LinearLayout>
 </RelativeLayout>

@@ -8,189 +8,155 @@
     android:background="@color/grey"
     tools:context=".HomepageActivity">
 
+    <RelativeLayout
+        android:id="@+id/rv1"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/shape1"
+        >
+            <TextView
+                android:id="@+id/welcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Welcome to"
+                android:textSize="39dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                />
+        <TextView
+            android:id="@+id/bux"
+            android:layout_below="@id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bux Travel,"
+            android:textSize="29dp"
+            android:layout_marginTop="-10dp"
+            android:fontFamily="@font/poppinsbold"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="to travel is to live"
+            android:textSize="20dp"
+            android:layout_below="@id/bux"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape2"
+            android:drawableRight="@drawable/search"
+            android:layout_margin="10dp"
+            android:paddingRight="20dp"
+            />
+    </RelativeLayout>
     <LinearLayout
-        android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#3fff"
-        android:gravity="center"
-        android:padding="10dp">
+        android:layout_below="@id/rv1"
+        android:paddingTop="20dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menu"
+            android:textColor="@color/primaryColor"
+            android:fontFamily="@font/poppinsmedium"
+            android:layout_marginLeft="25dp"
+            android:textSize="20dp"
+            />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="@font/poppinsbold"
-        android:text="Looking for a trip?"
-        android:textColor="@color/primaryColor"
-        android:textSize="25sp" />
-
-    <com.airbnb.lottie.LottieAnimationView
-        android:layout_width="225dp"
-        android:layout_height="225dp"
-        app:lottie_rawRes="@raw/usingmobilephone"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        android:scaleType="fitCenter"/>
-
-        <!--        <Button-->
-        <!--            style="@style/Widget.AppCompat.Button.Borderless.Colored"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginBottom="30dp"-->
-        <!--            android:drawableLeft="@drawable/search"-->
-        <!--            android:drawablePadding="8dp"-->
-        <!--            android:fontFamily="@font/poppinsbold"-->
-        <!--            android:paddingLeft="16dp"-->
-        <!--            android:text="Cari Lokasi Tujuan"-->
-        <!--            android:textAlignment="textStart"-->
-        <!--            android:textAllCaps="false"-->
-        <!--            android:textColor="#FF000000"-->
-        <!--            android:textSize="14sp" />-->
-
-        <RelativeLayout
+        <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:background="#3fff"
-            android:orientation="vertical"
-            android:backgroundTint="@color/black">
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="1"
+            android:columnCount="2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/buss"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="28dp"
-                android:orientation="horizontal">
-
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="5dp"
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="@color/white"
+                >
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="10dp">
-
+                    android:padding="18dp"
+                    android:gravity="center_horizontal"
+                    >
                     <ImageView
-                        android:layout_width="40sp"
-                        android:layout_height="40sp"
-                        android:layout_marginTop="20sp"
-                        android:src="@drawable/busdeparture" />
-
-                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:tint="@color/primaryColor"
+                        android:src="@drawable/bus">
+                    </ImageView>
+                    <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="90sp"
-                        android:paddingTop="10dp"
-                        android:paddingBottom="10dp"
-                        android:src="@drawable/line_dot" />
-
-                    <ImageView
-                        android:layout_width="35sp"
-                        android:layout_height="35sp"
-                        android:src="@drawable/tracking" />
+                        android:layout_height="wrap_content"
+                        android:text="Daftar Buss"
+                        android:textSize="15dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textColor="@color/primaryColor"
+                        >
+                    </TextView>
                 </LinearLayout>
-
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/booking"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="5dp"
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="@color/white"
+                >
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppinsbold"
-                        android:text="Departure" />
-
-                    <EditText
-                        android:id="@+id/et_departure"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppinsbold"
-                        android:hint="Try 'Makassar'"
-                        android:singleLine="true" />
-
+                    android:orientation="vertical"
+                    android:padding="18dp"
+                    android:gravity="center_horizontal"
+                    >
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:tint="@color/primaryColor"
+                        android:src="@drawable/bus">
+                    </ImageView>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="50dp"
-                        android:fontFamily="@font/poppinsbold"
-                        android:text="Arrival" />
-
-                    <EditText
-                        android:id="@+id/et_arival"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppinsbold"
-                        android:hint="Try 'Jakarta'"
-                        android:singleLine="true" />
+                        android:text="Booking"
+                        android:textColor="@color/primaryColor"
+                        android:fontFamily="@font/poppinsregular">
+                    </TextView>
                 </LinearLayout>
-
-            </LinearLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginTop="232dp"
-                android:layout_marginBottom="21dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="6dp"
-                        android:layout_toStartOf="@+id/et_passenger"
-                        android:src="@drawable/passenger" />
-
-                    <EditText
-                        android:id="@+id/et_passenger"
-                        android:layout_width="125dp"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppinsbold"
-                        android:hint="Total Passenger"
-                        android:inputType="number"
-                        android:textSize="15sp" />
-
-                    <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="6dp"
-                        android:layout_toStartOf="@+id/et_date"
-                        android:src="@drawable/calendar" />
-
-                    <TextView
-                        android:id="@+id/et_date"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="5sp"
-                        android:fontFamily="@font/poppinsbold"
-                        android:hint="Date"
-                        android:textSize="15dp" />
-
-                </LinearLayout>
-
-            </RelativeLayout>
-
-        </RelativeLayout>
-
-        <Button
-            android:id="@+id/et_book"
-            android:layout_width="250dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/poppinsbold"
-            android:text="Book" />
-
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
     </LinearLayout>
+<Button
+    android:id="@+id/buttonLogout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Logout"
+    android:background="@color/primaryColor"
+    android:layout_alignParentBottom="true"
+    android:layout_margin="30dp"
+    />
 </RelativeLayout>
+

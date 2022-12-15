@@ -3,9 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center_horizontal">
+    android:gravity="center_horizontal"
+    android:background="@color/primaryColor">
 
     <TextView
+        android:id="@+id/tvdetailtiket"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -15,37 +17,52 @@
         android:fontFamily="@font/poppinsbold"
         android:text="Details Ticket"
         android:textAlignment="center"
-        android:textSize="30sp" />
-
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Details Ticket"-->
-<!--        android:fontFamily="@font/poppinsbold"-->
-<!--        android:textSize="30sp"/>-->
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        />
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="130dp">
+        android:layout_marginTop="130dp"
+        android:background="@drawable/shape1">
 
         <Button
-            android:layout_width="wrap_content"
+
+            android:id="@+id/bookingnow"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:text="Book Now"
+            android:layout_above="@id/cancelbooking"
+            android:background="@drawable/shape2"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            />
+        <Button
+
+            android:id="@+id/cancelbooking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="cancel"
+            android:background="@drawable/shape2"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="195dp"
-            android:layout_marginEnd="172dp"
-            android:layout_marginBottom="1dp"
-            android:text="Book Now" />
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            />
 
         <LinearLayout
             android:id="@+id/layoutDetails"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:background="@color/teal_200"
+            android:background="@drawable/shape1"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -57,45 +74,50 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppinsbold"
-                    android:text="Kota Asal \t\t\t\t\t\t\t\t\t:"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Kota Asal :"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Kota Tujuan :"
+                    android:textColor="@color/white"
                     android:textSize="15sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/poppinsbold"
-                    android:text="Kota Tujuan \t\t\t\t\t\t\t:"
-                    android:textSize="15sp" />
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Jumlah Penumpang:"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/poppinsbold"
-                    android:text="Jumlah Penumpang \t\t:"
-                    android:textSize="15sp" />
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Tanggal:"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/poppinsbold"
-                    android:text="Tanggal \t\t\t\t\t\t\t\t\t\:"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:textColor="@color/white"
+                    android:text="Harga Tiket:"
                     android:textSize="15sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/poppinsbold"
-                    android:text="Harga Tiket \t\t\t\t\t\t\t:"
-                    android:textSize="15sp" />
-
-
             </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/layoutGet"
                 android:layout_width="wrap_content"
@@ -107,8 +129,9 @@
                     android:id="@+id/et_getKotaAsal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppinsbold"
+                    android:fontFamily="@font/poppinsmedium"
                     android:text="GetKota Asal"
+                    android:textColor="@color/white"
                     android:textSize="15sp" />
 
                 <TextView
@@ -116,7 +139,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/poppinsbold"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:textColor="@color/white"
                     android:text="GetKota Tujuan"
                     android:textSize="15sp" />
 
@@ -125,7 +149,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/poppinsbold"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:textColor="@color/white"
                     android:text="GetJml Penumpang"
                     android:textSize="15sp" />
 
@@ -134,7 +159,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/poppinsbold"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:textColor="@color/white"
                     android:text="GetTanggal"
                     android:textSize="15sp" />
 
@@ -143,116 +169,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/poppinsbold"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:textColor="@color/white"
                     android:text="GetHarga Tiket"
                     android:textSize="15sp" />
 
             </LinearLayout>
-
         </LinearLayout>
-
     </RelativeLayout>
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="horizontal"-->
-<!--        android:layout_gravity="center_horizontal">-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="vertical"-->
-<!--                android:layout_margin="20sp"-->
-<!--                android:layout_marginLeft="20sp">-->
-
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:fontFamily="@font/poppinsbold"-->
-<!--                    android:textSize="15sp"-->
-<!--                    android:hint="Kota Asal"/>-->
-
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:fontFamily="@font/poppinsbold"-->
-<!--                    android:textSize="15sp"-->
-<!--                    android:layout_marginTop="10dp"-->
-<!--                    android:hint="Kota Tujuan"/>-->
-
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:fontFamily="@font/poppinsbold"-->
-<!--                    android:textSize="15sp"-->
-<!--                    android:layout_marginTop="10dp"-->
-<!--                    android:hint="Jumlah Penumpang" />-->
-
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:fontFamily="@font/poppinsbold"-->
-<!--                    android:textSize="15sp"-->
-<!--                    android:layout_marginTop="10dp"-->
-<!--                    android:hint="Harga Tiket Satuan"/>-->
-
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:fontFamily="@font/poppinsbold"-->
-<!--                    android:textSize="15sp"-->
-<!--                    android:layout_marginTop="10dp"-->
-<!--                    android:hint="Tanggal" />-->
-
-<!--            </LinearLayout>-->
-
-<!--        <LinearLayout-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="vertical"-->
-<!--            android:layout_margin="20sp">-->
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:fontFamily="@font/poppinsbold"-->
-<!--                android:textSize="15sp"-->
-<!--                android:hint="GetKota Asal"/>-->
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:fontFamily="@font/poppinsbold"-->
-<!--                android:textSize="15sp"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                android:hint="GetKota Tujuan"/>-->
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:fontFamily="@font/poppinsbold"-->
-<!--                android:textSize="15sp"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                android:hint="GetJml Penumpang" />-->
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:fontFamily="@font/poppinsbold"-->
-<!--                android:textSize="15sp"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                android:hint="GetHarga Tiket"/>-->
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:fontFamily="@font/poppinsbold"-->
-<!--                android:textSize="15sp"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                android:hint="GetTanggal" />-->
-
-<!--        </LinearLayout>-->
-
-<!--    </LinearLayout>-->
 </LinearLayout>

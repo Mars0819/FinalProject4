@@ -4,14 +4,17 @@ import static com.example.finalproject4.Database.Preference.DATABASE_REFERENCE;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class BookingPage extends AppCompatActivity {
     private TextView kotaAsal, kotaTujuan, jmlPenumpang, tanggal, hargaTiket;
-
+    private Button cancel, booking;
     private int harga;
 
     @Override
@@ -27,7 +30,26 @@ public class BookingPage extends AppCompatActivity {
         tanggal = findViewById(R.id.et_getTanggal);
         hargaTiket = findViewById(R.id.et_getHargaTiket);
 
+        cancel = findViewById(R.id.cancelbooking);
+        booking = findViewById(R.id.bookingnow);
+
         showData();
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(BookingPage.this,booking.class));
+                finish();
+            }
+        });
+        booking.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(BookingPage.this, "Input Success", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(BookingPage.this,HomepageActivity.class));
+
+            }
+        });
+
 
     }
 
@@ -69,5 +91,6 @@ public class BookingPage extends AppCompatActivity {
             hargaTiket.setText(hrg);
         }
     }
+
 
 }
