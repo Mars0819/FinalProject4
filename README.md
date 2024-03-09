@@ -5,7 +5,7 @@
 <li>Umar Alfaruq Abdul Aziz -JVAN-KS04-003 = Bus Details<br>
 
 Aplikasi Reservasi Bus ini dibuat  untuk salah satu syarat kelulusan kami dari kampus merdeka Di Hacktiv8 program Android With Java Native for Android develpement.<br><hr>
- <h3>login dan register</h3>
+
 ![image](https://github.com/Mars0819/FinalProject4/assets/115476112/a7cc2bd8-1cfb-4ccd-adb2-003841e4435b)
 
  <h3>Homepage</h3>
